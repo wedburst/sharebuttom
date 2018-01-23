@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content="LA NETA"/>
+  <meta property="og:image" content="img/logo-2.png"/>
+  <meta property="og:url" content="http://jerseyhomerepairs.com/"/>
+  <meta property="og:site_name" content="jerseyhomerepairs.com"/>
+  <meta property="og:description" content="repairs and maintenence."/>
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:locale" content="es_MX" />
+
+  <meta name="twitter:title" content="La Neta" />
+  <meta name="twitter:image" content="img/logo-2.png" />
+  <meta name="twitter:url" content="http://jerseyhomerepairs.com/" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="repairs and maintenence" />
+  <meta property="twitter:image:width" content="300" />
+  <meta property="twitter:image:height" content="300" />
+  <title>Hola</title>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+</head>
+<body>
+  <a href="javascript:void(0)"
+   onclick="CenterWindow(550,450,50,'http://www.facebook.com/sharer.php?u=http://www.facebook.com/wedburst','demo_win');"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+
+  <a href="javascript:void(0)"
+   onclick="CenterWindow(550,450,50,'https://twitter.com/intent/tweet?text=Jersey%20Home%20Repairs%20http://jerseyhomereirs.com/','demo_win');"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a> 
+
+  <a href=”whatsapp://send” data-text=”Cómo crear el botón de Compartir en WhatsApp en tu sitio:” data-href=”” class=”wa_btn wa_btn_s” style=”display:none”>Compartir</a>
+
+  <a href=”whatsapp://send?text=<?php the_title(); ?> – <?php urlencode(the_permalink()); ?>” data-action=”share/whatsapp/share” >Compartir en WhatsApp</a>
+   <script>
+  /**
+   * Opens window screen centered.
+   * @param windowWidth the window width in pixels (integer)
+   * @param windowHeight the window height in pixels (integer)
+   * @param windowOuterHeight the window outer height in pixels (integer)
+   * @param url the url to open
+   * @param wname the name of the window
+   * @param features the features except width and height (status, toolbar, location, menubar, directories, resizable, scrollbars)
+   */
+  function CenterWindow(windowWidth, windowHeight, windowOuterHeight, url, wname, features) {
+    var centerLeft = parseInt((window.screen.availWidth - windowWidth) / 2);
+    var centerTop = parseInt(((window.screen.availHeight - windowHeight) / 2) - windowOuterHeight);
+ 
+    var misc_features;
+    if (features) {
+      misc_features = ', ' + features;
+    }
+    else {
+      misc_features = ', status=no, location=no, scrollbars=yes, resizable=yes';
+    }
+    var windowFeatures = 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + centerLeft + ',top=' + centerTop + misc_features;
+    var win = window.open(url, wname, windowFeatures);
+    win.focus();
+    return win;
+  }
+</script>
+</body>
+</html>
